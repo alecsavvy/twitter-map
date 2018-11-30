@@ -38,13 +38,11 @@ Processing: Most tweets received do not have any geo-tagged coordinates much les
 
 The issue with the user profile location is they're mostly named placed, not coordinates. Ex. Eugene, Oregon. This is where the Google Geocoder API comes into play. When I receive a tweet and the server decides to use the user location, send the named location to the Geocoder API to get appropriate coordinates. Once I receive these I add it to the user's empty geolocation param and send it to the client through websocket. 
 
+## Map(s) Design:
 
-Cite your data sources.
-  - Tweets: developer.twitter.com
-- Named Location Coordinates: developers.google.com
-
-Map(s):
 Describe your interaction choices. What and why?
+
+The point of the map was to get the most information to the user as possible so I allowed each tweet to be clicked on and show the content of the actual tweet as well as providing multiple filters for the user to perform some analysis. They were also free to move about the map as they please because the density of some twitter streams gets very high.
 
 I actually allowed all of the zoom levels because some tweet streams can get very dense and you can actually zoom in very far and still have a sizeable amount of data. The same is for zooming out. If you zoom in too far you may be missing a large portion of the interaction so the map should generally stay on a large scale with options to zoom in if need be.
 
@@ -59,6 +57,10 @@ I only got as far as implementing markers for each tweet but ideally these would
 Also, I would want a more density analysis based approach. The display gets very convoluted with large amounts of markers so having the markers sum up to a single circle containing the count of markers at various zoom levels would be the next step in symbology.
 
  UI/UX diagrams are in `~/twitter-map/mocks`.
+
+Data Sources:
+  - Tweets: developer.twitter.com
+- Named Location Coordinates: developers.google.com
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
