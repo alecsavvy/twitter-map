@@ -1,5 +1,7 @@
 # Twitter Map
 
+![example map](https://pages.uoregon.edu/asavoy/GEOG_490/map.gif)
+
 ## Getting Started
 - Clone the repo using `git clone https://github.com/alecsavvy/twitter-map.git`
 - Gather a Twitter API key at https://apps.twitter.com/
